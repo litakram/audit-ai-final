@@ -1,4 +1,4 @@
-// ==================== APPLICATION STATE ==================== 
+// ==================== APPLICATION STATE =====================
 class AuditApp {
     constructor() {
         this.currentView = 'overview';
