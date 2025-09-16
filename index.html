@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audit de Maturité IA - Framework d'Évaluation</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="insights-styles.css">
-    <link rel="stylesheet" href="insights-models.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +21,7 @@
     <header class="header" role="banner">
         <div class="header-container">
             <div class="header-brand">
-                <img src="ai-crafters-logo-b.png.webp" alt="AI Crafters Logo" class="logo">
+                <img src="/assets/images/ai-crafters-logo-b.png.webp" alt="AI Crafters Logo" class="logo">
             </div>
             <div class="header-actions">
                 <!-- Theme Switcher removed -->
@@ -74,7 +72,7 @@
                     </div>
                     <div class="hero-image-column">
                         <div class="image-container">
-                            <img src="hero-image(1)(1).png" alt="AI Maturity Audit Illustration"
+                            <img src="/assets/images/hero-image.png" alt="AI Maturity Audit Illustration"
                                 class="hero-illustration">
                         </div>
                     </div>
@@ -132,7 +130,7 @@
                         <i class="fas fa-play-circle hero-icon" aria-hidden="true"></i>
                         <div class="action-content">
                             <h4 class="action-title">Continuer l'Audit</h4>
-                            <p id="start-audit-desc" class="action-description">Reprendre l'évaluation de maturité IA
+                            <p id="start-audit-desc" class="action-description" style="color: #000000;">Reprendre l'évaluation de maturité IA
                             </p>
                         </div>
                         <i class="fas fa-arrow-right action-arrow" aria-hidden="true"></i>
@@ -201,6 +199,28 @@
                     Révision des Résultats
                 </h2>
                 <p class="view-subtitle">Vérifiez vos résultats avant de générer le rapport final</p>
+                <div class="review-instructions">
+                    <p aria-label="Explication des couleurs des résultats">Les résultats sont affichés avec quatre couleurs pour indiquer le niveau de maturité :</p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div>
+                            <span class="color-box" style="background: #22c55e; display: inline-block; width: 24px; height: 16px; border-radius: 4px; margin-right: 8px; vertical-align: middle;" aria-label="Succès"></span>
+                            <strong> Niveau élevé :</strong> vos réponses indiquent une bonne maîtrise de cet axe.
+                        </div>
+                        <div>
+                            <span class="color-box" style="background: #3b82f6; display: inline-block; width: 24px; height: 16px; border-radius: 4px; margin-right: 8px; vertical-align: middle;" aria-label="Attention"></span>
+                            <strong> Niveau moyen :</strong> des améliorations sont possibles sur cet axe.
+                        </div>
+                        <div>
+                            <span class="color-box" style="background: #f59e0b; display: inline-block; width: 24px; height: 16px; border-radius: 4px; margin-right: 8px; vertical-align: middle;" aria-label="Attention"></span>
+                            <strong> Niveau faible :</strong> cet axe nécessite une attention particulière.
+                        </div>
+                        <div>
+                            <span class="color-box" style="background: #f41111; display: inline-block; width: 24px; height: 16px; border-radius: 4px; margin-right: 8px; vertical-align: middle;" aria-label="Erreur"></span>
+                            <strong> Niveau critique :</strong> cet axe nécessite une intervention immédiate.
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="review-content" id="review-content">
@@ -221,10 +241,10 @@
 
         <!-- Insights View -->
         <section id="insights" class="view" aria-labelledby="insights-title">
-            <div class="review-header">
+            <!-- <div class="review-header">
                 <h2 id="review-title" class="view-title">Insights et Recommandations</h2>
                 <p class="view-subtitle">Analyse détaillée de votre maturité IA avec recommandations personnalisées</p>
-            </div>
+            </div> -->
 
             <!-- Company Info Form -->
             <div class="company-info-section" id="company-info-section">
@@ -248,182 +268,182 @@
                                 placeholder="Décrivez brièvement l'activité et la mission de votre entreprise..."></textarea>
                         </div>
                         <!-- numero de téléphone -->
-                        <div class="form-group">
+                           <div class="form-group">
                             <label for="company-phone" class="form-label">Numéro de téléphone</label>
                             <div class="phone-input-container" style="display: flex; gap: 8px; ">
                                 <select id="company-phone-code" class="form-select dd" >
-                                    <option value="+33" selected>🇫🇷 France +33</option>
-                                    <option value="+93">🇦🇫 Afghanistan +93</option>
-                                    <option value="+355">🇦🇱 Albanie +355</option>
-                                    <option value="+213">🇩🇿 Algérie +213</option>
-                                    <option value="+376">🇦🇩 Andorre +376</option>
-                                    <option value="+244">🇦🇴 Angola +244</option>
-                                    <option value="+54">🇦🇷 Argentine +54</option>
-                                    <option value="+374">🇦🇲 Arménie +374</option>
-                                    <option value="+61">🇦🇺 Australie +61</option>
-                                    <option value="+43">🇦🇹 Autriche +43</option>
-                                    <option value="+994">🇦🇿 Azerbaïdjan +994</option>
-                                    <option value="+973">🇧🇭 Bahreïn +973</option>
-                                    <option value="+880">🇧🇩 Bangladesh +880</option>
-                                    <option value="+375">🇧🇾 Biélorussie +375</option>
-                                    <option value="+32">🇧🇪 Belgique +32</option>
-                                    <option value="+501">🇧🇿 Belize +501</option>
-                                    <option value="+229">🇧🇯 Bénin +229</option>
-                                    <option value="+975">🇧🇹 Bhoutan +975</option>
-                                    <option value="+591">🇧🇴 Bolivie +591</option>
-                                    <option value="+387">🇧🇦 Bosnie-Herzégovine +387</option>
-                                    <option value="+267">🇧🇼 Botswana +267</option>
-                                    <option value="+55">🇧🇷 Brésil +55</option>
-                                    <option value="+673">🇧🇳 Brunei +673</option>
-                                    <option value="+359">🇧🇬 Bulgarie +359</option>
-                                    <option value="+226">🇧🇫 Burkina Faso +226</option>
-                                    <option value="+257">🇧🇮 Burundi +257</option>
-                                    <option value="+855">🇰🇭 Cambodge +855</option>
-                                    <option value="+237">🇨🇲 Cameroun +237</option>
-                                    <option value="+1">🇨🇦 Canada +1</option>
-                                    <option value="+238">🇨🇻 Cap-Vert +238</option>
-                                    <option value="+236">🇨🇫 Rép. centrafricaine +236</option>
-                                    <option value="+235">🇹🇩 Tchad +235</option>
-                                    <option value="+56">🇨🇱 Chili +56</option>
-                                    <option value="+86">🇨🇳 Chine +86</option>
-                                    <option value="+57">🇨🇴 Colombie +57</option>
-                                    <option value="+269">🇰🇲 Comores +269</option>
-                                    <option value="+242">🇨🇬 Congo +242</option>
-                                    <option value="+506">🇨🇷 Costa Rica +506</option>
-                                    <option value="+385">🇭🇷 Croatie +385</option>
-                                    <option value="+53">🇨🇺 Cuba +53</option>
-                                    <option value="+357">🇨🇾 Chypre +357</option>
-                                    <option value="+420">🇨🇿 Rép. tchèque +420</option>
-                                    <option value="+45">🇩🇰 Danemark +45</option>
-                                    <option value="+253">🇩🇯 Djibouti +253</option>
-                                    <option value="+593">🇪🇨 Équateur +593</option>
-                                    <option value="+20">🇪🇬 Égypte +20</option>
-                                    <option value="+503">🇸🇻 Salvador +503</option>
-                                    <option value="+240">🇬🇶 Guinée équatoriale +240</option>
-                                    <option value="+291">🇪🇷 Érythrée +291</option>
-                                    <option value="+372">🇪🇪 Estonie +372</option>
-                                    <option value="+251">🇪🇹 Éthiopie +251</option>
-                                    <option value="+679">🇫🇯 Fidji +679</option>
-                                    <option value="+358">🇫🇮 Finlande +358</option>
-                                    <option value="+241">🇬🇦 Gabon +241</option>
-                                    <option value="+220">🇬🇲 Gambie +220</option>
-                                    <option value="+995">🇬🇪 Géorgie +995</option>
-                                    <option value="+49">🇩🇪 Allemagne +49</option>
-                                    <option value="+233">🇬🇭 Ghana +233</option>
-                                    <option value="+30">🇬🇷 Grèce +30</option>
-                                    <option value="+299">🇬🇱 Groenland +299</option>
-                                    <option value="+502">🇬🇹 Guatemala +502</option>
-                                    <option value="+224">🇬🇳 Guinée +224</option>
-                                    <option value="+245">🇬🇼 Guinée-Bissau +245</option>
-                                    <option value="+592">🇬🇾 Guyana +592</option>
-                                    <option value="+509">🇭🇹 Haïti +509</option>
-                                    <option value="+504">🇭🇳 Honduras +504</option>
-                                    <option value="+852">🇭🇰 Hong Kong +852</option>
-                                    <option value="+36">🇭🇺 Hongrie +36</option>
-                                    <option value="+354">🇮🇸 Islande +354</option>
-                                    <option value="+91">🇮🇳 Inde +91</option>
-                                    <option value="+62">🇮🇩 Indonésie +62</option>
-                                    <option value="+98">🇮🇷 Iran +98</option>
-                                    <option value="+964">🇮🇶 Irak +964</option>
-                                    <option value="+353">🇮🇪 Irlande +353</option>
-                                    <option value="+39">🇮🇹 Italie +39</option>
-                                    <option value="+225">🇨🇮 Côte d'Ivoire +225</option>
-                                    <option value="+81">🇯🇵 Japon +81</option>
-                                    <option value="+962">🇯🇴 Jordanie +962</option>
-                                    <option value="+7">🇰🇿 Kazakhstan +7</option>
-                                    <option value="+254">🇰🇪 Kenya +254</option>
-                                    <option value="+965">🇰🇼 Koweït +965</option>
-                                    <option value="+996">🇰🇬 Kirghizistan +996</option>
-                                    <option value="+856">🇱🇦 Laos +856</option>
-                                    <option value="+371">🇱🇻 Lettonie +371</option>
-                                    <option value="+961">🇱🇧 Liban +961</option>
-                                    <option value="+266">🇱🇸 Lesotho +266</option>
-                                    <option value="+231">🇱🇷 Libéria +231</option>
-                                    <option value="+218">🇱🇾 Libye +218</option>
-                                    <option value="+423">🇱🇮 Liechtenstein +423</option>
-                                    <option value="+370">🇱🇹 Lituanie +370</option>
-                                    <option value="+352">🇱🇺 Luxembourg +352</option>
-                                    <option value="+853">🇲🇴 Macao +853</option>
-                                    <option value="+389">🇲🇰 Macédoine +389</option>
-                                    <option value="+261">🇲🇬 Madagascar +261</option>
-                                    <option value="+265">🇲🇼 Malawi +265</option>
-                                    <option value="+60">🇲🇾 Malaisie +60</option>
-                                    <option value="+960">🇲🇻 Maldives +960</option>
-                                    <option value="+223">🇲🇱 Mali +223</option>
-                                    <option value="+356">🇲🇹 Malte +356</option>
-                                    <option value="+222">🇲🇷 Mauritanie +222</option>
-                                    <option value="+230">🇲🇺 Maurice +230</option>
-                                    <option value="+52">🇲🇽 Mexique +52</option>
-                                    <option value="+373">🇲🇩 Moldavie +373</option>
-                                    <option value="+377">🇲🇨 Monaco +377</option>
-                                    <option value="+976">🇲🇳 Mongolie +976</option>
-                                    <option value="+382">🇲🇪 Monténégro +382</option>
-                                    <option value="+212">🇲🇦 Maroc +212</option>
-                                    <option value="+258">🇲🇿 Mozambique +258</option>
-                                    <option value="+95">🇲🇲 Myanmar +95</option>
-                                    <option value="+264">🇳🇦 Namibie +264</option>
-                                    <option value="+977">🇳🇵 Népal +977</option>
-                                    <option value="+31">🇳🇱 Pays-Bas +31</option>
-                                    <option value="+64">🇳🇿 Nouvelle-Zélande +64</option>
-                                    <option value="+505">🇳🇮 Nicaragua +505</option>
-                                    <option value="+227">🇳🇪 Niger +227</option>
-                                    <option value="+234">🇳🇬 Nigeria +234</option>
-                                    <option value="+850">🇰🇵 Corée du Nord +850</option>
-                                    <option value="+47">🇳🇴 Norvège +47</option>
-                                    <option value="+968">🇴🇲 Oman +968</option>
-                                    <option value="+92">🇵🇰 Pakistan +92</option>
-                                    <option value="+970">🇵🇸 Palestine +970</option>
-                                    <option value="+972">🇵🇸 Palestine +972</option>
-                                    <option value="+507">🇵🇦 Panama +507</option>
-                                    <option value="+675">🇵🇬 Papouasie-Nouvelle-Guinée +675</option>
-                                    <option value="+595">🇵🇾 Paraguay +595</option>
-                                    <option value="+51">🇵🇪 Pérou +51</option>
-                                    <option value="+63">🇵🇭 Philippines +63</option>
-                                    <option value="+48">🇵🇱 Pologne +48</option>
-                                    <option value="+351">🇵🇹 Portugal +351</option>
-                                    <option value="+974">🇶🇦 Qatar +974</option>
-                                    <option value="+40">🇷🇴 Roumanie +40</option>
-                                    <option value="+7">🇷🇺 Russie +7</option>
-                                    <option value="+250">🇷🇼 Rwanda +250</option>
-                                    <option value="+966">🇸🇦 Arabie saoudite +966</option>
-                                    <option value="+221">🇸🇳 Sénégal +221</option>
-                                    <option value="+381">🇷🇸 Serbie +381</option>
-                                    <option value="+65">🇸🇬 Singapour +65</option>
-                                    <option value="+421">🇸🇰 Slovaquie +421</option>
-                                    <option value="+386">🇸🇮 Slovénie +386</option>
-                                    <option value="+677">🇸🇧 Îles Salomon +677</option>
-                                    <option value="+252">🇸🇴 Somalie +252</option>
-                                    <option value="+27">🇿🇦 Afrique du Sud +27</option>
-                                    <option value="+82">🇰🇷 Corée du Sud +82</option>
-                                    <option value="+211">🇸🇸 Soudan du Sud +211</option>
-                                    <option value="+34">🇪🇸 Espagne +34</option>
-                                    <option value="+94">🇱🇰 Sri Lanka +94</option>
-                                    <option value="+249">🇸🇩 Soudan +249</option>
-                                    <option value="+597">🇸🇷 Suriname +597</option>
-                                    <option value="+268">🇸🇿 Swaziland +268</option>
-                                    <option value="+46">🇸🇪 Suède +46</option>
-                                    <option value="+41">🇨🇭 Suisse +41</option>
-                                    <option value="+963">🇸🇾 Syrie +963</option>
-                                    <option value="+886">🇹🇼 Taïwan +886</option>
-                                    <option value="+992">🇹🇯 Tadjikistan +992</option>
-                                    <option value="+255">🇹🇿 Tanzanie +255</option>
-                                    <option value="+66">🇹🇭 Thaïlande +66</option>
-                                    <option value="+228">🇹🇬 Togo +228</option>
-                                    <option value="+216">🇹🇳 Tunisie +216</option>
-                                    <option value="+90">🇹🇷 Turquie +90</option>
-                                    <option value="+993">🇹🇲 Turkménistan +993</option>
-                                    <option value="+256">🇺🇬 Ouganda +256</option>
-                                    <option value="+380">🇺🇦 Ukraine +380</option>
-                                    <option value="+971">🇦🇪 Émirats arabes unis +971</option>
-                                    <option value="+44">🇬🇧 Royaume-Uni +44</option>
-                                    <option value="+1">🇺🇸 États-Unis +1</option>
-                                    <option value="+598">🇺🇾 Uruguay +598</option>
-                                    <option value="+998">🇺🇿 Ouzbékistan +998</option>
-                                    <option value="+58">🇻🇪 Venezuela +58</option>
-                                    <option value="+84">🇻🇳 Vietnam +84</option>
-                                    <option value="+967">🇾🇪 Yémen +967</option>
-                                    <option value="+260">🇿🇲 Zambie +260</option>
-                                    <option value="+263">🇿🇼 Zimbabwe +263</option>
+                                    <option value="+33" selected>🇫🇷 +33</option>
+                                    <option value="+93">🇦🇫 +93</option>
+                                    <option value="+355">🇦🇱 +355</option>
+                                    <option value="+213">🇩🇿 +213</option>
+                                    <option value="+376">🇦🇩 +376</option>
+                                    <option value="+244">🇦🇴 +244</option>
+                                    <option value="+54">🇦🇷 +54</option>
+                                    <option value="+374">🇦🇲 +374</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+43">🇦🇹 +43</option>
+                                    <option value="+994">🇦🇿 +994</option>
+                                    <option value="+973">🇧🇭 +973</option>
+                                    <option value="+880">🇧🇩 +880</option>
+                                    <option value="+375">🇧🇾 +375</option>
+                                    <option value="+32">🇧🇪 +32</option>
+                                    <option value="+501">🇧🇿 +501</option>
+                                    <option value="+229">🇧🇯 +229</option>
+                                    <option value="+975">🇧🇹 +975</option>
+                                    <option value="+591">🇧🇴 +591</option>
+                                    <option value="+387">🇧🇦 +387</option>
+                                    <option value="+267">🇧🇼 +267</option>
+                                    <option value="+55">🇧🇷 +55</option>
+                                    <option value="+673">🇧🇳 +673</option>
+                                    <option value="+359">🇧🇬 +359</option>
+                                    <option value="+226">🇧🇫 +226</option>
+                                    <option value="+257">🇧🇮 +257</option>
+                                    <option value="+855">🇰🇭 +855</option>
+                                    <option value="+237">🇨🇲 +237</option>
+                                    <option value="+1">🇨🇦 +1</option>
+                                    <option value="+238">🇨🇻 +238</option>
+                                    <option value="+236">🇨🇫 +236</option>
+                                    <option value="+235">🇹🇩 +235</option>
+                                    <option value="+56">🇨🇱 +56</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+57">🇨🇴 +57</option>
+                                    <option value="+269">🇰🇲 +269</option>
+                                    <option value="+242">🇨🇬 +242</option>
+                                    <option value="+506">🇨🇷 +506</option>
+                                    <option value="+385">🇭🇷 +385</option>
+                                    <option value="+53">🇨🇺 +53</option>
+                                    <option value="+357">🇨🇾 +357</option>
+                                    <option value="+420">🇨🇿 +420</option>
+                                    <option value="+45">🇩🇰 +45</option>
+                                    <option value="+253">🇩🇯 +253</option>
+                                    <option value="+593">🇪🇨 +593</option>
+                                    <option value="+20">🇪🇬 +20</option>
+                                    <option value="+503">🇸🇻 +503</option>
+                                    <option value="+240">🇬🇶 +240</option>
+                                    <option value="+291">🇪🇷 +291</option>
+                                    <option value="+372">🇪🇪 +372</option>
+                                    <option value="+251">🇪🇹 +251</option>
+                                    <option value="+679">🇫🇯 +679</option>
+                                    <option value="+358">🇫🇮 +358</option>
+                                    <option value="+241">🇬🇦 +241</option>
+                                    <option value="+220">🇬🇲 +220</option>
+                                    <option value="+995">🇬🇪 +995</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+233">🇬🇭 +233</option>
+                                    <option value="+30">🇬🇷 +30</option>
+                                    <option value="+299">🇬🇱 +299</option>
+                                    <option value="+502">🇬🇹 +502</option>
+                                    <option value="+224">🇬🇳 +224</option>
+                                    <option value="+245">🇬🇼 +245</option>
+                                    <option value="+592">🇬🇾 +592</option>
+                                    <option value="+509">🇭🇹 +509</option>
+                                    <option value="+504">🇭🇳 +504</option>
+                                    <option value="+852">🇭🇰 +852</option>
+                                    <option value="+36">🇭🇺 +36</option>
+                                    <option value="+354">🇮🇸 +354</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+62">🇮🇩 +62</option>
+                                    <option value="+98">🇮🇷 +98</option>
+                                    <option value="+964">🇮🇶 +964</option>
+                                    <option value="+353">🇮🇪 +353</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+225">🇨🇮 +225</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+962">🇯🇴 +962</option>
+                                    <option value="+7">🇰🇿 +7</option>
+                                    <option value="+254">🇰🇪 +254</option>
+                                    <option value="+965">🇰🇼 +965</option>
+                                    <option value="+996">🇰🇬 +996</option>
+                                    <option value="+856">🇱🇦 +856</option>
+                                    <option value="+371">🇱🇻 +371</option>
+                                    <option value="+961">🇱🇧 +961</option>
+                                    <option value="+266">🇱🇸 +266</option>
+                                    <option value="+231">🇱🇷 +231</option>
+                                    <option value="+218">🇱🇾 +218</option>
+                                    <option value="+423">🇱🇮 +423</option>
+                                    <option value="+370">🇱🇹 +370</option>
+                                    <option value="+352">🇱🇺 +352</option>
+                                    <option value="+853">🇲🇴 +853</option>
+                                    <option value="+389">🇲🇰 +389</option>
+                                    <option value="+261">🇲🇬 +261</option>
+                                    <option value="+265">🇲🇼 +265</option>
+                                    <option value="+60">🇲🇾 +60</option>
+                                    <option value="+960">🇲🇻 +960</option>
+                                    <option value="+223">🇲🇱 +223</option>
+                                    <option value="+356">🇲🇹 +356</option>
+                                    <option value="+222">🇲🇷 +222</option>
+                                    <option value="+230">🇲🇺 +230</option>
+                                    <option value="+52">🇲🇽 +52</option>
+                                    <option value="+373">🇲🇩 +373</option>
+                                    <option value="+377">🇲🇨 +377</option>
+                                    <option value="+976">🇲🇳 +976</option>
+                                    <option value="+382">🇲🇪 +382</option>
+                                    <option value="+212">🇲🇦 +212</option>
+                                    <option value="+258">🇲🇿 +258</option>
+                                    <option value="+95">🇲🇲 +95</option>
+                                    <option value="+264">🇳🇦 +264</option>
+                                    <option value="+977">🇳🇵 +977</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                    <option value="+505">🇳🇮 +505</option>
+                                    <option value="+227">🇳🇪 +227</option>
+                                    <option value="+234">🇳🇬 +234</option>
+                                    <option value="+850">🇰🇵 +850</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+968">🇴🇲 +968</option>
+                                    <option value="+92">🇵🇰 +92</option>
+                                    <option value="+970">🇵🇸 +970</option>
+                                    <option value="+972">🇵🇸 +972</option>
+                                    <option value="+507">🇵🇦 +507</option>
+                                    <option value="+675">🇵🇬 +675</option>
+                                    <option value="+595">🇵🇾 +595</option>
+                                    <option value="+51">🇵🇪 +51</option>
+                                    <option value="+63">🇵🇭 +63</option>
+                                    <option value="+48">🇵🇱 +48</option>
+                                    <option value="+351">🇵🇹 +351</option>
+                                    <option value="+974">🇶🇦 +974</option>
+                                    <option value="+40">🇷🇴 +40</option>
+                                    <option value="+7">🇷🇺 +7</option>
+                                    <option value="+250">🇷🇼 +250</option>
+                                    <option value="+966">🇸🇦 +966</option>
+                                    <option value="+221">🇸🇳 +221</option>
+                                    <option value="+381">🇷🇸 +381</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+421">🇸🇰 +421</option>
+                                    <option value="+386">🇸🇮 +386</option>
+                                    <option value="+677">🇸🇧 +677</option>
+                                    <option value="+252">🇸🇴 +252</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <option value="+82">🇰🇷 +82</option>
+                                    <option value="+211">🇸🇸 +211</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+94">🇱🇰 +94</option>
+                                    <option value="+249">🇸🇩 +249</option>
+                                    <option value="+597">🇸🇷 +597</option>
+                                    <option value="+268">🇸🇿 +268</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+963">🇸🇾 +963</option>
+                                    <option value="+886">🇹🇼 +886</option>
+                                    <option value="+992">🇹🇯 +992</option>
+                                    <option value="+255">🇹🇿 +255</option>
+                                    <option value="+66">🇹🇭 +66</option>
+                                    <option value="+228">🇹🇬 +228</option>
+                                    <option value="+216">🇹🇳 +216</option>
+                                    <option value="+90">🇹🇷 +90</option>
+                                    <option value="+993">🇹🇲 +993</option>
+                                    <option value="+256">🇺🇬 +256</option>
+                                    <option value="+380">🇺🇦 +380</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+598">🇺🇾 +598</option>
+                                    <option value="+998">🇺🇿 +998</option>
+                                    <option value="+58">🇻🇪 +58</option>
+                                    <option value="+84">🇻🇳 +84</option>
+                                    <option value="+967">🇾🇪 +967</option>
+                                    <option value="+260">🇿🇲 +260</option>
+                                    <option value="+263">🇿🇼 +263</option>
                                 </select>
                                 <input type="tel" id="company-phone" class="form-input" 
                                     style="flex-grow: 1; height: 36px; padding: 4px 8px;"
@@ -484,7 +504,7 @@
             <!-- Results Section -->
             <div class="results-section" id="results-section" style="display: none;">
                 <!-- Charts -->
-                <div class="charts-row" style="display: flex; flex-direction: row; gap: 32px; justify-content: center; align-items: stretch; margin-bottom: 32px;">
+                <!-- <div class="charts-row" style="display: flex; flex-direction: row; gap: 32px; justify-content: center; align-items: stretch; margin-bottom: 32px;">
                     <div class="chart-card" style="flex: 1 1 0; min-width: 320px; background-color: #b4c5d5ff;">
                         <h3 class="chart-title" style="color: #1e293b;">Vue d'Ensemble</h3>
                         <div class="chart-container">
@@ -505,26 +525,22 @@
                             <canvas id="bar-chart"></canvas>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- AI Insights -->
-                <div class="insights-content" id="insights-content">
-                    <!-- AI-generated content will be inserted here -->
-                </div>
+                <div class="insights-content" id="insights-content" >
+                </div> 
 
                 <!-- Export Actions -->
                 <div class="export-section" style="background-color: #b4c5d5ff; margin-top: 30px;">
-                    <h3 class="section-title" style="text-align: center; color: #1e293b;">Exporter les Résultats</h3>
-                    <div class="export-actions" style="display: flex; justify-content: center; gap: 24px; margin-top: 18px;">
-                        <button class="btn btn-secondary" onclick="exportPDF()" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); color: #fff; border: none; box-shadow: 0 2px 8px rgba(245,158,11,0.15); font-weight: 600;">
-                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-                            Exporter PDF
-                        </button>
-                        <button class="btn btn-primary" onclick="copyInsights()" style="background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%); color: #fff; border: none; box-shadow: 0 2px 8px rgba(59,130,246,0.15); font-weight: 600;">
-                            <i class="fas fa-copy" aria-hidden="true"></i>
-                            Copier les Insights
-                        </button>
-                    </div>
+                <div class="thank-you-message" style="text-align: center; margin-bottom: 32px; padding: 24px 16px; background: #fffbe6; border-radius: 12px; box-shadow: 0 2px 8px rgba(30,41,59,0.06);">
+                    <i class="fas fa-award" style="font-size: 2.5rem; color: #fbbf24; margin-bottom: 12px;" aria-hidden="true"></i>
+                    <h3 style="color: #1e293b; font-size: 1.6rem; margin-bottom: 8px;">Merci d'avoir complété l'audit de maturité IA !</h3>
+                    <p style="color: #334155; font-size: 1.1rem; margin-bottom: 0;">
+                        Votre analyse personnalisée est prête.<br>
+                        Téléchargez votre rapport PDF pour découvrir vos résultats et recommandations sur-mesure.
+                    </p>
+                </div>
                 </div>
             </div>
         </section>
@@ -536,7 +552,6 @@
     </div>
 
     <!-- Loading Overlay -->
-    <!-- Loading Overlay -->
     <div class="loading-overlay" id="loading-overlay" style="display: none;">
         <div class="spinner" role="status" aria-live="assertive" aria-busy="true">
             <div class="loading-spinner">
@@ -546,11 +561,11 @@
         </div>
     </div>
 
-    <!-- Dropdown Styler Script -->
 
     <!-- Ajout du script d'insights Gemini -->
-    <script src="insights-gemini.js"></script>
-    <script src="app.js"></script>
+    <script src="src/js/app.js"></script>
+    <script src="src/js/pdf-export-new.js"></script>
+    <script src="src/js/insights-gemini.js"></script>
 </body>
 
 </html>
